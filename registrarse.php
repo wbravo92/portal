@@ -37,7 +37,7 @@ if($nombre && $correo && $password && $password2){
             if(strlen($password>6)){
                 if($password=$password2){
                     
-                    $validaEmail=$db->validarUsuarios('email','usuarios',$correo);
+                  $validaEmail=0;//  $db->validarUsuarios('email','usuarios',$correo);
                     if($validaEmail==0){
                         
                           if(validarFoto($nombre)){
@@ -104,7 +104,7 @@ if($nombre && $correo && $password && $password2){
 	
 	<div class="form-group">
 	<label for="password2">Repetir contraseña</label>
-	<input type="password2" class="form-control" id="password2" name="password2" placeholder="repita su contraseña">
+	<input type="password" class="form-control" id="password2" name="password2" placeholder="repita su contraseña">
 	</div>
 
 	
