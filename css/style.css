@@ -1,0 +1,34 @@
+body{
+    margin: 20px auto;
+}
+.caja {
+     float: none!important;
+    margin: 0 auto;
+}
+
+.agrupar {
+   display:inline-flex;
+}
+
+.fieldset {
+    border:1px solid rgba(0, 0, 0, 0.06);
+   
+    box-shadow: red;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tituloPortal {
+    padding-top: 45px;
+    padding-bottom: 14px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.select {
+    padding: 6px;
+    margin-left: 10px;
+}
