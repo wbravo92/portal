@@ -1,4 +1,5 @@
 <?php require('inc/header.inc') ;?>
+<h1>Prueba de GitHub</h1>
 
 <div class="container-fluid">
     <div class="row">
