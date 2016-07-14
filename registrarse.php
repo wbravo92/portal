@@ -83,10 +83,11 @@ if($nombre && $correo && $password && $password2){
  
 <legend>Registrate</legend>
 	
-   
+	
+   <div class="form-group">
 	<label for="nombre">Nombre</label>
 	<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escriba su nombre">
-	
+	</div>	
 	
 	
 	<div class="form-group">
@@ -139,10 +140,11 @@ if($nombre && $correo && $password && $password2){
 
 
 	<div class="form-group ladoB col-md-6 col-lg-6">
-	 
+  
+	  <div class="form-group">
 	<label for="Telefono">Telefono</label>
 	<input type="text" class="form-control" id="telefono" name="Telefono" placeholder="Ingrese su telefono">
-	
+    </div>
 	
 	<div class="form-group">
 	<label for="direccion">Direccion</label>
