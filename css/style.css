@@ -32,3 +32,20 @@ body{
     padding: 6px;
     margin-left: 10px;
 }
+
+.ladoA {
+float: left;
+padding-left: 70px;    
+}
+
+.ladoB {
+float: right;
+padding-right: 70px;
+margin-top: 50px;
+}
+
+
+
+#tituloRegistro {
+    text-align: center;
+}

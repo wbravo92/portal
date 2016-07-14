@@ -5,12 +5,13 @@
 
 <div class="container-fluid">
     <div class="row">
-       <div class="col-md-12 text-center"><h1>Portal Web</h1>
+      <h1 id="tituloRegistro">Formulario de registro de usuarios</h1>
+       <div class="col-md-8 col-lg-8 text-center">
       </div>
     </div>
 <div class="row">
              
-    <div class="col-sm-5 caja col-centrar">
+
     
                                                        
     <?php
@@ -74,17 +75,18 @@ if($nombre && $correo && $password && $password2){
 ?>                                                              
                                                                             
                                                         
-                                                                              
-                                                         
+                                                                                                                                 
 <form method="post" action="" enctype="multipart/form-data"  role="form" >
-<legend>Registrate</legend>
 <fieldset class="fieldset">
+
+ <div class="form-group ladoA col-md-6 col-lg-6">	
+ 
+<legend>Registrate</legend>
 	
-	
-    <div class="form-group">	
+   
 	<label for="nombre">Nombre</label>
 	<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escriba su nombre">
-	</div>	
+	
 	
 	
 	<div class="form-group">
@@ -104,7 +106,7 @@ if($nombre && $correo && $password && $password2){
 	
 	<div class="form-group">
 	<label for="password2">Repetir contraseña</label>
-	<input type="password" class="form-control" id="password2" name="password2" placeholder="repita su contraseña">
+	<input type="password" class="form-control" id="password2" name="password2" placeholder="Repita su contraseña">
 	</div>
 
 	
@@ -131,10 +133,16 @@ if($nombre && $correo && $password && $password2){
         </div>
     </div>
 
-	<div class="form-group">
+
+
+</div>
+
+
+	<div class="form-group ladoB col-md-6 col-lg-6">
+	 
 	<label for="Telefono">Telefono</label>
 	<input type="text" class="form-control" id="telefono" name="Telefono" placeholder="Ingrese su telefono">
-	</div>	
+	
 	
 	<div class="form-group">
 	<label for="direccion">Direccion</label>
@@ -162,17 +170,20 @@ if($nombre && $correo && $password && $password2){
 	<input name="foto" type="file" class="form-control">
 	</div>
 	
+	
 	<button type="submit" class="btn btn-primary">Ingresar</button>
 	<a class="pull-right" href="index.php">Click aqui si tienes una cuenta</a>
-	</fieldset>
+	
+	
+</div>	
+</fieldset>
 
 </form>
  
 
-   
     </div>  
    </div> <!--end div row-->
-</div>
+
   
   
    
