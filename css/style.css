@@ -49,3 +49,13 @@ margin-top: 50px;
 #tituloRegistro {
     text-align: center;
 }
+
+#logout {
+    
+    float: right;
+}
+
+#titulolistado {
+    margin-top: 75px;
+    margin-bottom: 20px;
+}

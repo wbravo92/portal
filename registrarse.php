@@ -76,7 +76,7 @@ if($nombre && $correo && $password && $password2){
                                                                             
                                                         
                                                                                                                                  
-<form method="post" action="" enctype="multipart/form-data"  role="form" >
+<form method="post" action="#" enctype="multipart/form-data"  role="form" >
 <fieldset class="fieldset">
 
  <div class="form-group ladoA col-md-6 col-lg-6">	
