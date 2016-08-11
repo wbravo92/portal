@@ -1,6 +1,7 @@
 <?php
-require('inc/navbar.inc') ; ;
-require_once "query/cargador.php";
+require('inc/navbar.inc');
+require_once ("cargador.php");
+require_once("config.php");
 
 ?>
 
@@ -15,10 +16,13 @@ require_once "query/cargador.php";
  <?php   
                                                        
 
+                  
+        
 //$array=$db->getClientes();
+        
+$db=new database(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_CHARSET);
 
-
-$db->preparar("select id,nombre,apellido,email,contrasena,cedula,verificador,telefono,direccion,edad,ciudad,departamento,codigoPostal from usuarios");
+$db->preparar("select idUsuario,nombre,apellido,email,contrasena,cedula,verificador,telefono,dirección,edad,ciudad,departamento,codigoPostal from usuarios");
 
 $db->ejecutar();
 $db->prep()->bind_result($id,$nombre,$apellido,$email,$contrasena,$cedula,
