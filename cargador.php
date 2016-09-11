@@ -7,7 +7,7 @@ spl_autoload_register(function($clase){
 });
 
 
-$db=new database(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_CHARSET);  
+$db=new query(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_CHARSET);  
 
 
 ?>

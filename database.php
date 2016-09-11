@@ -37,6 +37,28 @@ return $this->prep->fetch();
 }
 }
 
+public function IngresarPanel($correo,$contrasena){
+
+$query("Select correo,contrasena from app_user where correo =".$correo."and contrasena=".$contrasena);
+
+$resultado=$db->query($query)->num_row();
+
+if($resultado==1){
+    echo "El usuario existe";
+}else{
+    echo "el usuario no existe";
+}
+
+
+
+}
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+
+  </head>
+
+  <body>
+
+  <img src="Imagenes/fondos/fondo1.jpg"/>
 
 
 ?>

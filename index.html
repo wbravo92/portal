@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +7,44 @@
 
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+  <!--  <link rel="icon" href="../../favicon.ico">-->
 
     <title>Pagina principal </title>
-
-  
+    
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
+
+
+<script type="text/javaScript">
+
+    function validar(){
+    
+var correo=document.getElementById("email").value;
+var password=document.getElementById("password").value;
+    
+if(correo==""){
+    alert("Ingrese un correo")
+    return false;
+}
+
+var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+if ( !expr.test(correo) ){
+alert("Error: La dirección de correo " + correo + " es incorrecta.");
+    return false;
+}       
+
+if(password==""){
+alert("Ingrese su contraseña")
+        return false;
+}
+         
+//alert("formulario enviado correctamente");
+        
+ }
+
+</script>
+
 
   </head>
 
@@ -30,20 +62,15 @@
           <a class="navbar-brand" href="#">Over-Root</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
+          <form name="login" class="navbar-form navbar-right" action="valida.php" method="post">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input name="email" id="email" type="email" placeholder="Email" class="form-control" required title="Ingrese su correo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input name="password" id="password" type="password" placeholder="Password" class="form-control" required title="Ingrese su contraseña">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button id="btn" type="submit" class="btn btn-success" onclick="validar()">Sign in</button>
           </form>
-
-
-
-
-
 
         </div><!--/.navbar-collapse -->
       </div>
@@ -62,7 +89,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="Imagenes/bg1.jpg" alt="First slide">
+          <img class="first-slide" src="Imagenes/bg1.jpg" alt="First slide"/>
           <div class="container">
             <div class="carousel-caption">
               <h1>Bienvenidos a OverRoot</h1>
@@ -72,7 +99,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="Imagenes/bg2.jpg" alt="Second slide">
+          <img class="second-slide" src="Imagenes/bg2.jpg" alt="Second slide"/>
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -82,7 +109,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="Imagenes/bg3.jpg" alt="Third slide">
+          <img class="third-slide" src="Imagenes/bg3.jpg" alt="Third slide"/>
           <div class="container">
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
@@ -115,19 +142,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="Imagenes/e1.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="Imagenes/e1.jpg" alt="Generic placeholder image" width="140" height="140"/>
           <h2>Heading</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="Imagenes/e1.jpg" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="Imagenes/e2.png" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="Imagenes/e2.png" alt="Generic placeholder image" width="140" height="140"/>
           <h2>Heading</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="Imagenes/e2.png" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="Imagenes/e3.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="Imagenes/e3.jpg" alt="Generic placeholder image" width="140" height="140"/>
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="Imagenes/e3.jpg" role="button">View details &raquo;</a></p>
@@ -145,7 +172,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src ="Imagenes/g1.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src ="Imagenes/g1.jpg" alt="Generic placeholder image"/>
         </div>
       </div>
 
@@ -157,7 +184,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src ="Imagenes/g2.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src ="Imagenes/g2.jpg" alt="Generic placeholder image"/>
         </div>
       </div>
 
@@ -169,7 +196,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src ="Imagenes/g3.jpg" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src ="Imagenes/g3.jpg" alt="Generic placeholder image"/>
         </div>
       </div>
 
@@ -191,14 +218,15 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+   <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
 
+  
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!--<script src="../../assets/js/vendor/holder.min.js"></script>-->
     <script src="bootstrap/js/"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+   <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
     
     
     
