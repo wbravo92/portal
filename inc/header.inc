@@ -3,6 +3,6 @@
 <head charset="utf-8">
 <title>Portal</title> 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">         
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet">      
 </head>
 <body>

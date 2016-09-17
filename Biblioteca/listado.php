@@ -20,13 +20,12 @@ require_once("config.php");
         
 //$array=$db->getClientes();
         
-$db=new database(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_CHARSET);
+$db=new query(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_CHARSET);
 
 $db->preparar("select idUsuario,nombre,apellido,email,contrasena,cedula,verificador,telefono,dirección,edad,ciudad,departamento,codigoPostal from usuarios");
 
 $db->ejecutar();
-$db->prep()->bind_result($id,$nombre,$apellido,$email,$contrasena,$cedula,
-                         $verificador,$telefono,$direccion,$edad,$ciudad,$departamento,$codigoPostal);
+$db->prep()->bind_result($id,$nombre,$apellido,$correo,$contrasena,$estado,$fecha);
 
         
 echo "<table class='table table-cell'
@@ -37,14 +36,8 @@ echo "<table class='table table-cell'
         <td>Apellido</td>
         <td>Email</td>
         <td>Contraseña</td>
-        <td>Cedula</td>
-        <td>Verificador</td>
-        <td>Telefono</td>
-        <td>Direccion</td>
-        <td>Edad</td>
-        <td>Ciudad</td>
-        <td>Departamento</td>
-        <td>Codigo postal</td>
+        <td>Estado</td>
+        <td>Fecha</td>
         </tr>
     <tbody>            
 ";
@@ -57,14 +50,8 @@ echo "<tr>
     <td>$apellido</td>
     <td>$email</td>
     <td>$contrasena</td>
-    <td>$cedula</td>
-    <td>$verificador</td>
-    <td>$telefono</td>
-    <td>$direccion</td>
-    <td>$edad</td>
-    <td>$ciudad</td>
-    <td>$departamento</td>
-    <td>$codigoPostal</td>
+    <td>$estado</td>
+    <td>$fecha</td>
     </tr>";  
        
 }
