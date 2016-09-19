@@ -5,4 +5,3 @@
 <link rel="stylesheet" href="css/style.css">
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet">      
 </head>
-<body>

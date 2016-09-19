@@ -67,3 +67,37 @@ margin-top: 50px;
 #cuerpo-lista {
     padding-top: 80px;
 }
+
+h1.add {
+    margin-bottom: 20px;
+}
+
+
+#new_user {
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+#new_user_title {
+    margin-bottom: 40px;
+}
+
+.user {
+
+}
+
+.regresar {
+padding: 6px 30px 6px 30px;
+margin-right: 40px;    
+}
+
+.mod{
+margin-right: 20px;
+}
+
+
+
+.users {
+    margin-bottom: 10px;
+    margin-left: 15px;
+}

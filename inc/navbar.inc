@@ -1,6 +1,4 @@
- <?php include 'header.inc'?>
- 
- <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet">     
  <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -19,7 +17,7 @@
             <li><a href="#main.html">Menu</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="lista_usuarios.php">Listado de usuarios</a></li>
-            <li id="logout"><a href="#contact">Logout</a></li>
+            <li id="logout"><a href="cerrarsesion.php">Cerrar sesion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

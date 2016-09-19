@@ -1,6 +1,4 @@
-<?php
-session_start();
-
+<?php session_start();
 if(empty($_SESSION['correo'])){
     echo "Error, Pagina no localizada";
     exit;
@@ -39,18 +37,10 @@ require('inc/navbar.inc'); ?>
         
         <p><?php 
             $nombre = $_SESSION['name']; 
-            echo "Sesion de: ".$nombre;
-            
-            ?></p>
-        <a href="index.html">Cerrar sesión
-        
-        <?php
-            
-        $_SESSION['correo']="";    
-            
-        ?>
-        
-        </a>
+            echo "Sesion de: ".$nombre;?>
+        </p>
+      
+       
         <br><br>
       </div>
 
