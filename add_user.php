@@ -55,13 +55,16 @@ if($_POST){
     $contrasena2=$_POST['contrasena2'];
     $correo=$_POST['email'];
     
+    
 if($contrasena=$contrasena2){
   
     $instancia=new query('mysql.hostinger.es','u669375631_root','53206w','u669375631_porta','utf8');
       
+    $nombre=$_POST['nombre'];
+    $apellido=$_POST['apellido'];
     
     if($instancia->emailRepetido($correo)===false){
-        if($contrasena && $contrasena2 && $correo && $nombre && $apellido){
+        if($correo!="" && $nombre!="" && $apellido!=""){
         
     $nombre=$_POST['nombre'];
     $apellido=$_POST['apellido'];

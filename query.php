@@ -49,7 +49,7 @@ return false;
     
 public function listarUsuarios(){
         
-$query="SELECT * FROM app_user";
+$query="SELECT * FROM app_user order by id asc";
     
 $this->resultado2=$this->conexion->query($query); 
 
@@ -68,7 +68,7 @@ $query="INSERT INTO app_user(id,nombre,apellido,correo,contrasena,estado,fecha)
   
 if ($this->conexion->query($query) === TRUE) {
     $last_id = $this->conexion->insert_id;
-    echo "Exito al crear. El ultimo ID insertado es: " . $last_id . "con correo".$last_email;
+    echo "Exito al crear. El ultimo ID insertado es: " . $last_id;
 } else {
     echo "Error: " . $sql . "<br>" . $this->conexion->error;
 }
@@ -117,7 +117,22 @@ if($this->conexion->query($query)===true){
     $this->conexion->close();
 }
 
-} 
+}
+    
+public function ingresoUsuario($correo,$hora){
+
+$query="INSERT INTO ingreso_usuarios(id,correo,hora)values(null,'{$correo}','{$hora}')";    
+
+
+if ($this->conexion->query($query) === TRUE) {
+} else {
+echo "Error: " . $sql . "<br>" . $this->conexion->error;
+$this->conexion->close();    
+}
+
+
+
+}
      
      
  }       
