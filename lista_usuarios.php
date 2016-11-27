@@ -23,8 +23,7 @@ require_once('query.php');
 $instancia=new query(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_CHARSET);
 $resultado=$instancia->listarUsuarios();
 
-
-echo"<table class='table table-striped' width=100%>
+echo"<center><table class='table-list table table-striped' width=100%>
     <tr><th>ID</th><th>Nombre</th><th>Apellido</th><th>Correo</th><th>Contraseña</th><th>Fecha</th>
     <th></th><th></th></tr>";    
 
@@ -48,7 +47,7 @@ echo "
 </tr>";
 }
     
-echo "</table>";       
+echo "</table></center>";       
    
 }else{
    echo "error al instanciar";  
